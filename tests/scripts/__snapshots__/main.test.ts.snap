@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dynaStringify Simple object, minimal config 1`] = `"{\\"name\\":\\"John\\",\\"age\\":32,\\"cars\\":[\\"VW\\",\\"Plymouth\\"]}"`;
+
+exports[`dynaStringify Simple object, spaces 2 1`] = `
+"{
+  \\"name\\": \\"John\\",
+  \\"age\\": 32,
+  \\"cars\\": [
+    \\"VW\\",
+    \\"Plymouth\\"
+  ]
+}"
+`;
+
+exports[`dynaStringify Simple object, with callback for circular reference text 1`] = `
+"{
+  \\"name\\": \\"John\\",
+  \\"age\\": 32,
+  \\"cars\\": [
+    \\"VW\\",
+    \\"Plymouth\\",
+    \\"Circular reference for name: John\\",
+    \\"!REF\\"
+  ]
+}"
+`;
+
+exports[`dynaStringify Simple object, with circular reference 1`] = `
+"{
+  \\"name\\": \\"John\\",
+  \\"age\\": 32,
+  \\"cars\\": [
+    \\"VW\\",
+    \\"Plymouth\\"
+  ],
+  \\"value\\": \\"[CircularRef]\\"
+}"
+`;
+
+exports[`dynaStringify Simple object, with circular reference in array 1`] = `
+"{
+  \\"name\\": \\"John\\",
+  \\"age\\": 32,
+  \\"cars\\": [
+    \\"VW\\",
+    \\"Plymouth\\",
+    \\"[CircularRef]\\"
+  ]
+}"
+`;
+
+exports[`dynaStringify Simple object, with custom circular reference text 1`] = `
+"{
+  \\"name\\": \\"John\\",
+  \\"age\\": 32,
+  \\"cars\\": [
+    \\"VW\\",
+    \\"Plymouth\\"
+  ],
+  \\"value\\": \\"!REF\\"
+}"
+`;
